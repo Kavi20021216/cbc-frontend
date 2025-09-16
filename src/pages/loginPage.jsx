@@ -87,14 +87,18 @@ export default function LoginPage() {
                     } type="password" className="w-[350px] h-[40px] border border-white rounded-xl"/>
 
                 </div>
-                <button onClick={login} className="w-[350px] h-[40px] bg-blue-500 rounded-xl text-white text-lg mt-5 hover:bg-blue-600 transition-all cursor-pointer duration-300">
+                <button onClick={login} className="w-[350px] h-[40px] bg-accent rounded-xl text-white text-lg mt-5 hover:bg-blue-600 transition-all cursor-pointer duration-300">
                     Login
                 </button>
-                <button onClick={googleLogin} className="w-[350px] h-[40px] bg-blue-500 rounded-xl text-white text-lg mt-5 hover:bg-blue-600 transition-all cursor-pointer duration-300">
-                    Google Login
+                <button 
+                   onClick={googleLogin} 
+                   className="w-[350px] h-[40px] border border-accent bg-transparent rounded-xl text-white text-lg mt-5 hover:bg-[#f2c1a8] hover:text-white hover:border-none  transition-all cursor-pointer duration-300"
+                >
+                   Google Login
                 </button>
-                <p>Don't have an account? <Link to="/register" className="text-blue-500">Sign up</Link> from here</p>
-                <p>Forget Password? <Link to="/forget" className="text-blue-500">reset password</Link> from here</p>
+
+                <p>Don't have an account? <Link to="/register" className=" text-accent">Sign up</Link> from here</p>
+                <p>Forget Password? <Link to="/forget" className="text-accent ">reset password</Link> from here</p>
                 
 			</div>
 		</div>
