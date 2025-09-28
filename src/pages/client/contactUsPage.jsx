@@ -1,4 +1,3 @@
-// src/pages/client/contactUsPage.jsx
 import { useState } from "react";
 import axios from "axios";
 import toast from "react-hot-toast";
