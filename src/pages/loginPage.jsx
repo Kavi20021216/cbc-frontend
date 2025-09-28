@@ -74,7 +74,7 @@ export default function LoginPage() {
                             (e)=>{
                                 setEmail(e.target.value)
                             }
-                        }
+                        } 
                     type="text" className="w-[350px] h-[40px] border border-white rounded-xl"/>
                 </div>
                 <div className="w-[350px]  flex flex-col    ">
@@ -87,7 +87,7 @@ export default function LoginPage() {
                     } type="password" className="w-[350px] h-[40px] border border-white rounded-xl"/>
 
                 </div>
-                <button onClick={login} className="w-[350px] h-[40px] bg-accent rounded-xl text-white text-lg mt-5 hover:bg-blue-600 transition-all cursor-pointer duration-300">
+                <button onClick={login} className="w-[350px] h-[40px] bg-accent rounded-xl text-white text-lg mt-5  transition-all cursor-pointer duration-300">
                     Login
                 </button>
                 <button 

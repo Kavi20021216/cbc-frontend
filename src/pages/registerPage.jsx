@@ -92,7 +92,7 @@ export default function RegisterPage() {
 
                 <button
                     onClick={register}
-                    className="w-[350px] h-[40px]  rounded-xl text-white text-lg mt-5 bg-accent hover:bg-blue-600 transition-all duration-300"
+                    className="w-[350px] h-[40px]  rounded-xl text-white text-lg mt-5 bg-accent cursor-pointer transition-all duration-300"
                 >
                    Create
                 </button>
