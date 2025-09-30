@@ -7,6 +7,10 @@ import ProductsAdminPage from "./admin/productsAdminPage";
 import AddProductPage from "./admin/addProductAdminPage";
 import UpdateProductPage from "./admin/updateProduct";
 import OrdersPageAdmin from "./admin/ordersPageAdmin";
+import { FaPhone } from "react-icons/fa6";
+import AdminContactUs from "./admin/adminContactUs";
+import { FaEnvelope } from "react-icons/fa";
+import AdminReviewPage from "./admin/adminReviewPage";
 export default function AdminPage(){
     return(
         <div className="w-full h-screen  flex">
@@ -15,6 +19,8 @@ export default function AdminPage(){
 
                 <Link className="flex flex-row h-[60px] w-full  border p-[20px] items-center text-xl  gap-[25px]" to="/admin/products"><FaBoxArchive /> Products</Link>
                 <Link className="flex flex-row h-[60px] w-full border p-[20px] items-center text-xl  gap-[25px]" to="/admin/orders"><GiShoppingBag /> Orders</Link>
+                <Link className="flex flex-row h-[60px] w-full border p-[20px] items-center text-xl  gap-[25px]" to="/admin/contact-us"><FaEnvelope />Reviews</Link>
+                <Link className="flex flex-row h-[60px] w-full border p-[20px] items-center text-xl  gap-[25px]" to="/admin/reviews"><FaPhone />Contact Us</Link>
                 <Link className="flex flex-row h-[60px] w-full border p-[20px] items-center text-xl  gap-[25px]" to="/admin/users"><IoPeople /> Users</Link>
                 <Link className="flex flex-row h-[60px] w-full border p-[20px] items-center text-xl  gap-[25px]" to="/admin/settings"><IoSettings /> Settings</Link>
             </div>
@@ -25,6 +31,8 @@ export default function AdminPage(){
                     <Route path="/newProduct" element={<AddProductPage/>}/>
                     <Route path="/orders" element={<OrdersPageAdmin/>}/>
                     <Route path="/updateProduct" element={<UpdateProductPage/>}/>
+                    <Route path="/reviews" element={<AdminReviewPage/>}/>
+                    <Route path="/contact-us" element={<AdminContactUs/>}/>
                 </Routes>
             </div>
             

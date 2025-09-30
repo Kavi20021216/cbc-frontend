@@ -12,6 +12,7 @@ import ForgetPasswordPage from "./pages/client/forgetPassword";
 import ReviewPage from "./pages/client/reviewsPage";
 import AboutUsPage from "./pages/client/aboutUsPage";
 import ContactUsPage from "./pages/client/contactUsPage";
+import HomePageImageSlider from "./components/homePageImageSlider";
 
 
 
@@ -22,7 +23,8 @@ function App() {
 			<div className="w-full h-screen flex justify-center items-center">
 				    <Toaster position="top-right"/>
 					<Routes path="/">
-					
+					    
+						<Route path="/" element={<HomePageImageSlider/>}/>
 						<Route path="/login" element={<LoginPage/>}/>
 						<Route path="/test" element={<TestPage/>}/>
 						<Route path="/register" element={<RegisterPage/>}/>
