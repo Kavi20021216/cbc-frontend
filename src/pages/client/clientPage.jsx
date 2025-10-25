@@ -4,6 +4,7 @@ import ProductsPage from "./productsPage";
 import ProductOverViewPage from "./productOverView";
 import CartPage from "./cart";
 import CheckoutPage from "./checkoutPage";
+import HomePageImageSlider from "../../components/homePageImageSlider";
 
 export default function ClientWebPage() {
 	return (
@@ -14,7 +15,7 @@ export default function ClientWebPage() {
 					<Route
 						path="/"
 						element={
-							<h1 className="text-3xl text-center">Welcome to the Home Page</h1>
+							<HomePageImageSlider/>
 						}
 					/>
 					<Route

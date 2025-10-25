@@ -1,49 +1,6 @@
-// // src/components/HomePageImageSlider.jsx
-// import { useState, useEffect } from "react";
-// import Header from "./header";
-
-// export default function HomePageImageSlider() {
-//   const images = [
-//     "/slider1.png",
-//     "/slider2.png",
-//     "/slider3.png",
-//     "/slider4.png",
-//   ];
-
-//   const [activeImageIndex, setActiveImageIndex] = useState(0);
-
-//   // Auto-slide every 5 seconds for testing (change to 180000 for 3 min)
-//   useEffect(() => {
-//     const interval = setInterval(() => {
-//       setActiveImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-//     }, 5000);
-
-//     return () => clearInterval(interval);
-//   }, [images.length]);
-
-//   return (
-//     <div className="w-full flex flex-col">
-//       {/* Header */}
-//       <Header />
-
-//       {/* Slider container */}
-//       <div className="w-full max-w-7xl mx-auto mt-4">
-//         <img
-//           src={images[activeImageIndex]}
-//           className="w-full h-[500px] md:h-[600px] object-contain rounded-lg "
-//           alt={`Slide ${activeImageIndex + 1}`}
-//         />
-//       </div>
-//     </div>
-//   );
-// }
-
-
-
-// src/components/HomePageImageSlider.jsx
 import { useState, useEffect } from "react";
-import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io"; // Import arrows
-import Header from "./header";
+import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io"; 
+
 
 export default function HomePageImageSlider() {
   const images = [
@@ -77,10 +34,6 @@ export default function HomePageImageSlider() {
 
   return (
     <div className="w-full flex flex-col">
-      {/* Header */}
-      <Header />
-
-      {/* Slider container */}
       <div className="w-full max-w-7xl mx-auto mt-4 relative">
         {/* Slider Image */}
         <img

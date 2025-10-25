@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import Paginator from "../../components/paginator";
 import toast from "react-hot-toast";
+import Loader from "../../components/loader";
 
 export default function OrdersPageAdmin() {
 	const [orders, setOrders] = useState([]);
@@ -43,18 +44,23 @@ export default function OrdersPageAdmin() {
 	}, [loading, page, limit]);
 
 	return (
-		<div className="w-full h-full flex flex-col justify-between">
-			<table className="w-full border-[3px]">
+		<div className="w-full h-full p-4 flex flex-col justify-between">
+			<div>
+				 <h1 className="text-2xl font-bold mb-4">Orders (Admin)</h1>
+
+			{loading ? ( <Loader/>) : (
+				<div className="overflow-auto">
+				<table className="w-full border-[3px]">
 				<thead>
-					<tr>
-						<th className="p-[10px]">Order ID</th>
-						<th className="p-[10px]">email</th>
-						<th className="p-[10px]">name</th>
-						<th className="p-[10px]">Address</th>
-						<th className="p-[10px]">Phone</th>
-						<th className="p-[10px]">Status</th>
-						<th className="p-[10px]">Date</th>
-						<th className="p-[10px]">Total</th>
+					<tr  className="bg-[#ff9999]">
+						<th className="p-[10px] border">Order ID</th>
+						<th className="p-[10px] border">email</th>
+						<th className="p-[10px] border">name</th>
+						<th className="p-[10px] border">Address</th>
+						<th className="p-[10px] border">Phone</th>
+						<th className="p-[10px] border">Status</th>
+						<th className="p-[10px] border">Date</th>
+						<th className="p-[10px] border">Total</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -62,7 +68,7 @@ export default function OrdersPageAdmin() {
 						return (
 							<tr
 								key={index}
-								className="border-b-[1px] hover:bg-blue-600 hover:text-white"
+								className="border-b-[1px] hover:bg-[#eba7a7] hover:text-white"
 								onClick={() => {
                                     setOrderStatus(order.status);
                                     setOrderNotes(order.notes);
@@ -70,13 +76,13 @@ export default function OrdersPageAdmin() {
 									setPopupVisible(true);
 								}}
 							>
-								<td className="p-[10px]">{order.orderID}</td>
-								<td className="p-[10px]">{order.email}</td>
-								<td className="p-[10px]">{order.name}</td>
-								<td className="p-[10px]">{order.address}</td>
-								<td className="p-[10px]">{order.phone}</td>
-								<td className="p-[10px]">{order.status}</td>
-								<td className="p-[10px]">
+								<td className="p-[10px] border">{order.email}</td>
+								<td className="p-[10px] border">{order.orderID}</td>
+								<td className="p-[10px] border">{order.name}</td>
+								<td className="p-[10px] border">{order.address}</td>
+								<td className="p-[10px] border">{order.phone}</td>
+								<td className="p-[10px] border">{order.status}</td>
+								<td className="p-[10px] border">
 									{new Date(order.date).toLocaleDateString()}
 								</td>
 								<td className="p-[10px] text-end">
@@ -90,7 +96,11 @@ export default function OrdersPageAdmin() {
 					})}
 				</tbody>
 			</table>
-			\
+			</div>
+            )}
+			</div>
+				
+			
 			{popupVisible && clickedOrder && (
 				<div className="fixed top-0 left-0 w-full h-full bg-[#00000050] flex justify-center items-center z-50">
 					<div className="w-full max-w-2xl max-h-[600px] bg-white rounded-lg  p-6 relative shadow-xl">

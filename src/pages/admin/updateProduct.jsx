@@ -86,7 +86,10 @@ export default function UpdateProductPage() {
 
     return (
         <div className="w-full h-full flex justify-center items-center">
-            <div className="w-[600px] border-[3px] rounded-[15px] p-[40px] flex flex-wrap justify-between">
+            <div className="w-[700px] border-[3px] rounded-[15px] p-[40px] flex flex-wrap justify-between">
+                <div className="flex justify-center items-center text-3xl w-[700px] h-[80px] bg-white text-accent font-bold mb-5">
+                      <span>Update Product</span>
+                </div>
                 <div className="w-[200px] flex flex-col gap-[5px]">
                     <label className="text-sm font-semibold">Product ID</label>
                     <input
@@ -194,11 +197,11 @@ export default function UpdateProductPage() {
                 <div className="w-full flex justify-center flex-row py-[20px]">
                     <Link
                         to={"/admin/products"}
-                        className="w-[200px] h-[50px] bg-white text-black border-[2px] rounded-md flex justify-center items-center"
+                        className="w-[200px] h-[50px] bg-white text-black border-[2px] border-accent rounded-md flex justify-center items-center"
                     >
                         Cancel
                     </Link>
-                    <button onClick={handleSubmit} className="w-[200px] h-[50px] bg-black text-white border-[2px] rounded-md flex justify-center items-center ml-[20px]">
+                    <button onClick={handleSubmit} className="w-[200px] h-[50px] bg-accent text-white border-[2px] rounded-md flex justify-center items-center ml-[20px]">
                         Update Product
                     </button>
                 </div>
