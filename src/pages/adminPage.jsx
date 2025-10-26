@@ -13,6 +13,8 @@ import { FaEnvelope } from "react-icons/fa";
 import AdminReviewPage from "./admin/adminReviewPage";
 import UsersAdminPage from "./admin/adminUser";
 import UpdateUserPage from "./admin/updateUserAdmin";
+import SettingsAdminPage from "./admin/settingsAdminPage";
+
 
 export default function AdminPage(){
     return(
@@ -41,6 +43,7 @@ export default function AdminPage(){
                     <Route path="/contact-us" element={<AdminContactUs/>}/>
                     <Route path="/users" element={<UsersAdminPage/>}/>
                     <Route path="/updateUser" element={<UpdateUserPage/>}/>
+                    <Route path="/settings" element={<SettingsAdminPage/>}/>
                 </Routes>
             </div>
             
