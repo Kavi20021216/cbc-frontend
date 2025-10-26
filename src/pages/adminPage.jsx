@@ -11,6 +11,9 @@ import { FaPhone } from "react-icons/fa6";
 import AdminContactUs from "./admin/adminContactUs";
 import { FaEnvelope } from "react-icons/fa";
 import AdminReviewPage from "./admin/adminReviewPage";
+import UsersAdminPage from "./admin/adminUser";
+import UpdateUserPage from "./admin/updateUserAdmin";
+
 export default function AdminPage(){
     return(
         <div className="w-full h-screen  flex">
@@ -36,6 +39,8 @@ export default function AdminPage(){
                     <Route path="/updateProduct" element={<UpdateProductPage/>}/>
                     <Route path="/reviews" element={<AdminReviewPage/>}/>
                     <Route path="/contact-us" element={<AdminContactUs/>}/>
+                    <Route path="/users" element={<UsersAdminPage/>}/>
+                    <Route path="/updateUser" element={<UpdateUserPage/>}/>
                 </Routes>
             </div>
             
