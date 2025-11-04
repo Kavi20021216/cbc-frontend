@@ -1,4 +1,4 @@
-import { Link, Route, Routes } from "react-router-dom";
+import { Link, Route, Routes, useNavigate } from "react-router-dom";
 import { FaBoxArchive } from "react-icons/fa6";
 import { GiShoppingBag } from "react-icons/gi";
 import { IoPeople } from "react-icons/io5";
@@ -14,11 +14,43 @@ import AdminReviewPage from "./admin/adminReviewPage";
 import UsersAdminPage from "./admin/adminUser";
 import UpdateUserPage from "./admin/updateUserAdmin";
 import SettingsAdminPage from "./admin/settingsAdminPage";
+import { useEffect, useState } from "react";
+import Loader from "../components/loader";
+import axios from "axios";
+import toast from "react-hot-toast";
 
 
 export default function AdminPage(){
+    const navigate = useNavigate();
+    const [adminValidated , setAdminValidated] = useState(false);
+    useEffect(
+        ()=>{
+            const token = localStorage.getItem("token");
+            if(token == null){
+                toast.error("You are not logged in");
+                navigate("/login");
+            }else{
+                axios.get(import.meta.env.VITE_BACKEND_URL+"/api/users/", {
+                    headers: {
+                        Authorization: `Bearer ${token}`,
+                    },
+                }).then((response) => {
+                    if (response.data.role == "admin") {
+                        setAdminValidated(true);
+                    } else {
+                        toast.error("You are not authorized");
+                        navigate("/login");
+                    }
+                }).catch(() => {
+                    toast.error("You are not authorized");
+                    navigate("/login");
+                });
+            }
+        }
+    ,[]);
     return(
         <div className="w-full h-screen  flex">
+           {adminValidated ? <>
             <div className="w-[300px] h-full flex flex-col items-center">
                 <div className="flex justify-center items-center p-[20px] text-3xl w-[300px] h-[80px] bg-accent text-white font-bold mb-5">
                     <span>Admin Panel</span>
@@ -46,7 +78,7 @@ export default function AdminPage(){
                     <Route path="/settings" element={<SettingsAdminPage/>}/>
                 </Routes>
             </div>
-            
+           </> : <Loader/>}
         </div>
     )
 }
