@@ -115,7 +115,7 @@ import { Link, useNavigate } from "react-router-dom";
 export default function Header() {
   const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
-
+  const token = localStorage.getItem("token");
   return (
     <>
       
@@ -234,9 +234,19 @@ export default function Header() {
           <Link to="/contact-us" className="ml-10 text-white text-xl">
             Contact Us
           </Link>
-          <Link to="/cart" className="absolute right-[80px] ">
-            <BiCart className="text-white text-3xl ml-4" />
+          <Link to="/cart" className="absolute right-[250px] ">
+            <BiCart className="text-white text-xl ml-4" />
           </Link>
+          {
+            token!=null&&<button className="absolute right-[80px] text-center border-2 border-white p-[3px]  rounded-xl text-white text-xl ml-4 cursor-pointer hover:bg-white hover:text-accent" onClick={
+						()=>{
+							localStorage.removeItem("token");
+							navigate("/login");
+						}
+					}>
+						Logout
+					</button>
+          }
         </div>
       </header>
 
