@@ -238,7 +238,7 @@ export default function Header() {
             <BiCart className="text-white text-xl ml-4" />
           </Link>
           {
-            token!=null&&<button className="absolute right-[80px] text-white text-xl ml-4" onClick={
+            token!=null&&<button className="absolute right-[80px] text-center border-2 border-white p-[3px]  rounded-xl text-white text-xl ml-4 cursor-pointer hover:bg-white hover:text-accent" onClick={
 						()=>{
 							localStorage.removeItem("token");
 							navigate("/login");
