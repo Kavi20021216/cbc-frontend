@@ -11,7 +11,7 @@ export default function UsersAdminPage() {
     const [isLoading, setIsLoading] = useState(true);
     const [page, setPage] = useState(1);
     const [totalPages, setTotalPages] = useState(1);
-    const [limit, setLimit] = useState(20);
+    const [limit, setLimit] = useState(5);
     // const [a,setA] = useState(0);
     useEffect(() => {
                  if (isLoading) {

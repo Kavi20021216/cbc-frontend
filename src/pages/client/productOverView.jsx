@@ -427,12 +427,12 @@ export default function ProductOverViewPage() {
                     },
                   });
                 }}
-                className="w-[200px] h-[50px] cursor-pointer rounded-xl shadow-2xl text-white bg-blue-900 border-[3px] border-blue-900 hover:bg-white hover:text-blue-900"
+                className="w-[200px] h-[50px] cursor-pointer rounded-xl shadow-2xl text-white bg-[#f6b0b0] border-[3px] border-[#f6b0b0] hover:bg-white hover:text-[#f6b0b0]"
               >
                 Buy Now
               </button>
               <button
-                className="w-[200px] h-[50px] cursor-pointer rounded-xl shadow-2xl text-white bg-blue-600 border-[3px] border-blue-600 hover:bg-white hover:text-blue-600"
+                className="w-[200px] h-[50px] cursor-pointer rounded-xl shadow-2xl text-white bg-accent border-[3px] border-accent hover:bg-white hover:text-accent"
                 onClick={() => {
                   addToCart(product, 1);
                   toast.success("Product added to cart");

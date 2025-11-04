@@ -5,6 +5,8 @@ import ProductOverViewPage from "./productOverView";
 import CartPage from "./cart";
 import CheckoutPage from "./checkoutPage";
 import HomePageImageSlider from "../../components/homePageImageSlider";
+import ReviewPage from "./reviewsPage";
+import AboutUsPage from "./aboutUsPage";
 
 export default function ClientWebPage() {
 	return (
@@ -24,15 +26,15 @@ export default function ClientWebPage() {
 					/>
 					<Route
 						path="/reviews"
-						element={<h1 className="text-3xl text-center">Reviews Page</h1>}
+						element={<ReviewPage/>}
 					/>
 					<Route
 						path="/about-us"
-						element={<h1 className="text-3xl text-center">About Us Page</h1>}
+						element={<AboutUsPage/>}
 					/>
 					<Route
 						path="/contact-us"
-						element={<h1 className="text-3xl text-center">Contact Us Page</h1>}
+						element={<ReviewPage/>}
 					/>
 					<Route
 						path="/cart"

@@ -19,14 +19,14 @@ export default function ContactUsPage() {
 
     setLoading(true);
     try {
-      const token = localStorage.getItem("token"); // assuming login token
+      const token = localStorage.getItem("token"); 
       const res = await axios.post(
         import.meta.env.VITE_BACKEND_URL + "/api/contact-us",
         { name, email, massage },
         { headers: token ? { Authorization: "Bearer " + token } : {} }
       );
       toast.success(res.data.message || "Message sent successfully");
-      // clear form after submit
+    
       setName("");
       setEmail("");
       setMassage("");
@@ -38,18 +38,18 @@ export default function ContactUsPage() {
   };
 
   return (
-    <div className="w-full h-screen flex flex-col">
+    <div className="w-full min-h-screen flex flex-col">
       <Header />
 
       <div className="flex-1 relative">
-        {/* Background Image */}
+       
         <div
-          className="absolute inset-0 w-full h-full bg-cover bg-center"
+          className="absolute inset-0 w-full h-full bg-cover bg-center sm:bg-top"
           style={{ backgroundImage: `url(${contactUsBg})` }}
         ></div>
 
-        {/* Overlay content */}
-        <div className="relative z-10 flex items-center justify-center h-full">
+      
+        <div className="relative z-10 flex items-center justify-center h-full p-4 sm:p-6 md:p-10">
           <div className="bg-primary shadow-2xl bg-opacity-80 p-10 rounded-xl max-w-5xl w-full">
             <h1 className="text-4xl text-center font-bold mb-6">Contact Us</h1>
             <p className="text-lg text-center mb-6">
@@ -57,7 +57,7 @@ export default function ContactUsPage() {
               our team is here to help.
             </p>
 
-            {/* Contact form */}
+          
             <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
               <input
                 type="text"
@@ -100,3 +100,5 @@ export default function ContactUsPage() {
     </div>
   );
 }
+
+

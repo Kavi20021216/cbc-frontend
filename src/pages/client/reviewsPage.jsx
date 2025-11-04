@@ -154,7 +154,7 @@ export default function ReviewPage() {
     }
   }
 
-  // ⬇️ only allow edit for owner
+  
   function openEditPopup(r) {
     if (!currentEmail || r.email !== currentEmail) {
       setNotAllowedOpen(true);
@@ -184,7 +184,7 @@ export default function ReviewPage() {
     }
   }
 
-  // ⬇️ only allow delete for owner
+  
   async function deleteMine(r) {
     if (!currentEmail || r.email !== currentEmail) {
       setNotAllowedOpen(true);
@@ -208,7 +208,7 @@ export default function ReviewPage() {
     if (e.key === "Enter") fetchAllForProduct(productId);
   }
 
-  // 🔐 get current user email (simple)
+ 
   useEffect(() => {
     const token = localStorage.getItem("token");
     if (!token) return;
@@ -231,11 +231,11 @@ export default function ReviewPage() {
           <div className="w-full md:w-[800px] shadow-2xl p-4 rounded-lg">
             <h1 className="text-2xl font-bold mb-4">Reviews</h1>
 
-            {/* search row */}
+            
             <div className="flex items-center gap-2 mb-4">
               <input
                 className="w-full h-[40px] border border-gray-300 rounded-lg p-2"
-                placeholder="Enter Product ID (e.g., PROD001)"
+                placeholder="Enter Product ID (e.g., COSM001)"
                 value={productId}
                 onChange={(e) => setProductId(e.target.value)}
                 onKeyDown={handleKeyDown}
@@ -251,7 +251,7 @@ export default function ReviewPage() {
               </button>
             </div>
 
-            {/* product name (auto fill) */}
+           
             {productName && (
               <div className="mb-3">
                 <label className="text-sm font-semibold">Product Name</label>
@@ -263,7 +263,7 @@ export default function ReviewPage() {
               </div>
             )}
 
-            {/* add review (always add mode) */}
+           
             <div className="border rounded-lg p-3 mb-4">
               <h2 className="font-semibold mb-2">Add a review</h2>
               <Stars value={rating} onChange={setRating} />
@@ -293,7 +293,7 @@ export default function ReviewPage() {
               </div>
             </div>
 
-            {/* list */}
+            
             <div className="border rounded-lg p-3">
               <h2 className="font-semibold mb-2">All Reviews</h2>
               <div ref={listTopRef} />
@@ -359,7 +359,7 @@ export default function ReviewPage() {
         </div>
       </div>
 
-      {/* Edit popup */}
+     
       {editOpen && (
         <div className="fixed top-0 left-0 w-full h-full bg-[#00000050] flex justify-center items-center z-50">
           <div className="w-[95%] max-w-[500px] bg-white rounded-lg p-4">
@@ -391,7 +391,7 @@ export default function ReviewPage() {
         </div>
       )}
 
-      {/* Not allowed popup */}
+     
       {notAllowedOpen && (
         <div className="fixed top-0 left-0 w-full h-full bg-[#00000050] flex justify-center items-center z-50">
           <div className="w-[95%] max-w-[420px] bg-white rounded-lg p-4">

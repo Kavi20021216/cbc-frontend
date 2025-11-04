@@ -50,8 +50,8 @@ export default function SettingsAdminPage() {
   };
 
   return (
-    <div className="w-full min-h-screen flex justify-center items-center bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-100">
-      <div className="w-[500px] bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl shadow-2xl p-10 flex flex-col items-center">
+    <div className="w-full min-h-screen flex justify-center items-center bg-gray-50  text-gray-800 ">
+      <div className="w-[500px] bg-white  border-gray-200 rounded-2xl shadow-2xl p-10 flex flex-col items-center">
 
         
         {admin.image ? (
@@ -68,11 +68,11 @@ export default function SettingsAdminPage() {
         <h2 className="text-2xl font-bold mt-4">
           {admin.firstName} {admin.lastName}
         </h2>
-        <p className="text-gray-500 dark:text-gray-400">
+        <p className="text-gray-500 ">
           {admin.role || "Admin"}
         </p>
 
-        <div className="w-full mt-6 border-t border-gray-300 dark:border-gray-600 pt-4 text-center">
+        <div className="w-full mt-6 border-t border-gray-300 pt-4 text-center">
           <p className="mb-2">
             <span className="font-semibold">Email:</span> {admin.email}
           </p>

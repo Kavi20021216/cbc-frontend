@@ -64,7 +64,7 @@ export default function AddProductPage() {
                 console.log("Product added successfully");
                 console.log(res.data);
                 toast.success("Product added successfully");
-                navigate("/admin/products");
+                navigate("/admin/");
             }
         ).catch(
             (error)=>{
@@ -183,10 +183,13 @@ export default function AddProductPage() {
 						}}
 						className="w-full border-[1px] h-[40px] rounded-md"
 					>
-						<option value="cream">Cream</option>
-						<option value="face wash">Face Wash</option>
-						<option value="soap">Soap</option>
-						<option value="fragrance">Fragrance</option>
+						<option value="Cosmetics">Cosmetics</option>
+						<option value="Haircare">Haircare</option>
+						<option value="Skincare">Skincare</option>
+						<option value="Makeup">Makeup</option>
+						<option value="Bodycare">Bodycare</option>
+						<option value="Nailcare">Nailcare</option>
+						
 					</select>
 				</div>
 				<div className="w-full flex justify-center flex-row py-[20px]">

@@ -11,7 +11,7 @@ export default function ProductsAdminPage() {
 	const [isLoading, setIsLoading] = useState(true);
 	const [page, setPage] = useState(1);
     const [totalPages, setTotalPages] = useState(1);
-    const [limit, setLimit] = useState(10);
+    const [limit, setLimit] = useState(5);
 
 	// const [a,setA] = useState(0);
 

@@ -46,6 +46,7 @@ export default function AdminReviewPage() {
                 <tr className="bg-[#ff9999]">
                   <th className="p-2 border">Product ID</th>
                   <th className="p-2 border">User</th>
+                   <th className="p-2 border">Email</th>
                   <th className="p-2 border">Rating</th>
                   <th className="p-2 border">Comment</th>
                   <th className="p-2 border">Date</th>
@@ -57,8 +58,9 @@ export default function AdminReviewPage() {
                   <tr key={r._id} className="border-b">
                     <td className="p-2 border">{r.productId}</td>
                     <td className="p-2 border">
-                      {r.name} ({r.email})
+                      {r.name}
                     </td>
+                    <td className="p-2 border">{r.email}</td>
                     <td className="p-2 border">{r.rating}</td>
                     <td className="p-2 border">{r.comment}</td>
                     <td className="p-2 border">

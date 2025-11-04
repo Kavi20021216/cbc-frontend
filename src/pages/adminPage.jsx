@@ -25,7 +25,7 @@ export default function AdminPage(){
                 </div>
 
 
-                <Link className="flex flex-row h-[60px] w-full   border border-white shadow-2xl rounded-[15px] p-[20px] items-center text-xl  gap-[25px]" to="/admin/products"><FaBoxArchive /> Products</Link>
+                <Link className="flex flex-row h-[60px] w-full   border border-white shadow-2xl rounded-[15px] p-[20px] items-center text-xl  gap-[25px]" to="/admin"><FaBoxArchive /> Products</Link>
                 <Link className="flex flex-row h-[60px] w-full border  border-white shadow-2xl rounded-[15px] p-[20px] items-center text-xl  gap-[25px] mt-2" to="/admin/orders"><GiShoppingBag /> Orders</Link>
                 <Link className="flex flex-row h-[60px] w-full border border-white shadow-2xl rounded-[15px] p-[20px] items-center text-xl  gap-[25px] mt-2" to="/admin/reviews"><FaEnvelope />Reviews</Link>
                 <Link className="flex flex-row h-[60px] w-full border border-white shadow-2xl rounded-[15px] p-[20px] items-center text-xl  gap-[25px] mt-2" to="/admin/contact-us"><FaPhone />Contact Us</Link>
@@ -34,8 +34,8 @@ export default function AdminPage(){
             </div>
             <div className="w-[calc(100%-300px)]  h-full">
                 <Routes path="/*">
-                    <Route path="/" element={<h1>Dashboard</h1>}/>
-                    <Route path="/products" element={<ProductsAdminPage/>}/>
+                    
+                    <Route path="/" element={<ProductsAdminPage/>}/>
                     <Route path="/newProduct" element={<AddProductPage/>}/>
                     <Route path="/orders" element={<OrdersPageAdmin/>}/>
                     <Route path="/updateProduct" element={<UpdateProductPage/>}/>
