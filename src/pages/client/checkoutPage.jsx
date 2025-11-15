@@ -135,7 +135,7 @@ export default function CheckoutPage() {
 
             <div className="w-[190px] h-full text-4xl md:text-md flex flex-row justify-center items-center">
               <button
-                className="flex justify-center items-center w-[30px] rounded-lg bg-accent text-white cursor-pointer hover:bg-blue-400"
+                className="flex justify-center items-center w-[30px] rounded-lg bg-accent text-white cursor-pointer "
                 onClick={() => {
                   const newCart = [...cart];
                   newCart[index].quantity -= 1;
@@ -149,7 +149,7 @@ export default function CheckoutPage() {
               </button>
               <span className="mx-[10px]">{item.quantity}</span>
               <button
-                className="flex justify-center items-center w-[30px] rounded-lg bg-accent text-white cursor-pointer hover:bg-blue-400"
+                className="flex justify-center items-center w-[30px] rounded-lg bg-accent text-white cursor-pointer "
                 onClick={() => {
                   const newCart = [...cart];
                   newCart[index].quantity += 1;

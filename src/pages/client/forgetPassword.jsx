@@ -44,7 +44,7 @@ export default function ForgetPasswordPage() {
 					className="w-[350px] h-[40px] border border-white rounded-xl text-center"
 					onChange={(e) => setEmail(e.target.value)}
 				/>
-				<button onClick={sendOTP} className="w-[350px] h-[40px] bg-blue-500 rounded-xl text-white text-lg mt-5 hover:bg-blue-600  transition-all duration-300">
+				<button onClick={sendOTP} className="w-[350px] h-[40px] bg-accent rounded-xl text-white text-lg mt-5 hover:bg-blue-600  transition-all duration-300">
 					Send OTP
 				</button>
 			</div>}
